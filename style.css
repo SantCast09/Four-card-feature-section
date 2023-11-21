@@ -1,0 +1,107 @@
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background: var(--very-light-gray);
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        'header header header'
+        'supervisor builder calculator'
+        'supervisor karma calculator';
+    position: relative;
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+}
+
+header h1 {
+    font-weight: 200;
+    font-size: 30px;
+}
+
+header span {
+    display: block;
+    font-weight: 600;
+}
+
+header p {
+    width: 28%;
+    margin: auto;
+    color: var(--grayish-blue);
+    font-size: 12px;
+}
+
+.card {
+    width: 220px;
+    height: 150px;
+    margin: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    box-shadow: 2px 45px 44px -31px rgba(0, 0, 0, 0.15);
+    justify-items: center;
+}
+
+.card img {
+    float: right;
+    margin-right: 10px;
+    width: 40px;
+
+}
+
+.card h4 {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.card p {
+    margin-top: 5px;
+    color: var(--grayish-blue);
+    font-size: 10px;
+}
+
+.supervisor {
+    grid-area: supervisor;
+    border-top: 3px solid var(--cyan);
+    margin: auto;
+    position: relative;
+    left: 265px;
+}
+
+.builder {
+    border-top: 3px solid var(--red);
+    grid-area: builder;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.karma {
+    grid-area: karma;
+    border-top: 3px solid var(--orange);
+    margin: auto;
+
+}
+
+.calculator {
+    grid-area: calculator;
+    border-top: 3px solid var(--blue);
+    margin: auto;
+    position: relative;
+    right: 265px;
+}
